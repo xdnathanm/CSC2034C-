@@ -22,42 +22,116 @@ int sumOfOddPlace(unsigned long long int);
 // return true if prefix d is a prefix for number
 bool prefixMatched(unsigned long long int number, int d);
 
+
 // return the number of digits in argument
-int getSize(unsigned long long int);
+int getSize(unsigned long long int ccNum);
 
 
 /* return the first k number of digits from number.  If the
  * number of digits in number is is less than k, return number.
  */
-unsigned long int getPrefix(unsigned long long int number, int k);
+unsigned long long int getPrefix(unsigned long long int number, int k);
 
 int main() {
-	unsigned long long int ccNum = 4388576018410707; //--is valid; 4388576018402626--is invalid ;
+	unsigned long long int ccNum = 4388576018410707; //4388576018410707; //--is valid; 4388576018402626--is invalid ;
+	bool validity;
 	
+	validity = isValid(ccNum);
+	if (validity == true)
+	{
+		cout << "The creditcard:" << ccNum <<" is valid";
+
+	}
+	else
+	{
+		cout << "the credit Card is invalid";
+	}
 }
 
 bool isValid(unsigned long long int num) {
+
+	int oddNum = sumOfOddPlace(num);
+	int eveNum = sumOfDoubleEvenPlace(num);
+	int total = oddNum + eveNum;
+	total %= 10;
+	if (total == 0)
+	{
+		return true;
+	}
 	return false;
 }
-int getSize(unsigned long long ccNum)
+
+int getSize (unsigned long long ccNum)
 {
 	int size = 0;
 	while (ccNum != 0)
 	{
-		ccNum %= 10;
+		ccNum /= 10;
 		size++;
 	}
 	return size;
 }
 int getDigit(int digit) {
-	
-	int num=0;
-	while (digit > 9)
+
+	int num = 0;
+	while (digit >= 9)
 	{
 		num = digit % 10;
 		digit /= 10;
 		digit += num;
 	}
 	return digit;
+
+}
+int sumOfDoubleEvenPlace(unsigned long long int num)
+{
+	int sumOfDouble = 0;
+	int digit = 0;
+	int size;
+	size = getSize(num);
+	while (size != 0)
+	{
+		num /= 10;
+		digit = num % 10;
+		num /= 10;
+		digit *= 2;
+		if (digit >= 9)
+		{
+			digit = getDigit(digit);
+		}
+		sumOfDouble += digit;
+		size--;
+	}
+	return sumOfDouble;
+}
+int sumOfOddPlace(unsigned long long int num)
+{
+	int sumOfDouble = 0;
+	int digit = 0;
+	int size;
+	size = getSize(num);
+	while (size != 0)
+	{
+		
+		digit = num % 10;
+		num /= 100;
+		
+		
+		sumOfDouble += digit;
+		size-=2;
+		
+	}
+	return sumOfDouble;
+}
+bool prefixMatched(unsigned long long int number, int d)
+{
+	number = getPrefix(number, d);
+	return true;
+}
+unsigned long long int getPrefix(unsigned long long int number, int k)
+{
+
+	//while ()
+	return number;
 
 }
