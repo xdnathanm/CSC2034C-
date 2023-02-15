@@ -61,7 +61,7 @@ bool isValid(unsigned long long int num) {
 	return false;
 }
 
-int getSize (unsigned long long ccNum)
+int getSize (unsigned long long int ccNum)
 {
 	int size = 0;
 	while (ccNum != 0)
