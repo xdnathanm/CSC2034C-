@@ -24,10 +24,10 @@ void printBoard(char (*board)[7], int rows)
 {
 	int r = 0;
 	int c = 0;
-	while (c<=rows)
+	while (c<rows)
 	{
 
-		while (r <= 7)
+		while (r < 7)
 		{
 			std::cout << board[r][c] << " ";
 			
@@ -42,9 +42,9 @@ char* fillArry(char(*board)[7], int rows)
 {
 	int row = 0;
 	int column = 0;
-	while (row <= rows)
+	while (row < rows)
 	{
-		for (column = 0;column != 7;column++)
+		for (column = 0;column < 7;column++)
 		{
 			board[row][column] = '|';
 		
