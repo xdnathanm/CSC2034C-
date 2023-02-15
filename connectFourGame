@@ -1,0 +1,27 @@
+#include <iostream>
+
+
+// method to print the board to the console
+void printBoard(char board[6][7]);
+
+// method to prompt the user to select a column to drop a disk
+int dropDisk();
+//the end condition for the game;
+bool isOver();
+
+int main()
+{
+	char board [6][7];
+	printBoard(board [6] [7]);
+	std::cout << std:: endl;
+	return 0;
+}
+void printBoard(char board[6][7])
+{
+	int c = 0;
+	int r = 0;
+	while (c <= 7)
+	{
+		std ::cout << board[c][r];
+	}
+}
