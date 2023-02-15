@@ -2,26 +2,57 @@
 
 
 // method to print the board to the console
-void printBoard(char board[6][7]);
+void printBoard(char(*)[7],int rows);
 
 // method to prompt the user to select a column to drop a disk
 int dropDisk();
 //the end condition for the game;
 bool isOver();
+char* fillArry(char(*)[7], int rows);
 
 int main()
 {
-	char board [6][7];
-	printBoard(board [6] [7]);
+	char board[6][7];
+	
+	int rows = 6;
+	fillArry(board, rows);
+	printBoard(board ,rows);
 	std::cout << std:: endl;
 	return 0;
 }
-void printBoard(char board[6][7])
+void printBoard(char (*board)[7], int rows)
 {
-	int c = 0;
 	int r = 0;
-	while (c <= 7)
+	int c = 0;
+	while (c<=rows)
 	{
-		std ::cout << board[c][r];
+
+		while (r <= 7)
+		{
+			std::cout << board[r][c] << " ";
+			
+			r++;
+		}
+		std::cout << std::endl;
+		c++;
+		r = 0;
 	}
+}
+char* fillArry(char(*board)[7], int rows)
+{
+	int row = 0;
+	int column = 0;
+	while (row <= rows)
+	{
+		for (column = 0;column != 7;column++)
+		{
+			board[row][column] = '|';
+		
+		}
+
+		row++;
+		
+	}
+	
+	return *board;
 }
