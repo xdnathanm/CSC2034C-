@@ -46,7 +46,7 @@ char* fillArry(char(*board)[7], int rows)
 	{
 		for (column = 0;column < 7;column++)
 		{
-			board[row][column] = '|';
+			board[row][column] = '   ';
 		
 		}
 
