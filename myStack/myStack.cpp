@@ -6,35 +6,30 @@ using namespace std;
 
 // the constructor
 // create an instence of myStack
-class myStack {
-
-private:
-	vector < int> data;
-public:
-	myStack()
-	{
-		vector <int> data = { 0 };
-	}
+myStack:: myStack
+{
+	vector < int> data = {0};
+}
 	// the destructor
-	 ~myStack()
+	myStack :: ~myStack()
 	{
 		 data.clear();
 	}
 
 
-	void push(int number)
+	void myStack ::push(int number)
 	{
 		data.push_back(number);
 	}
-	int pop()
+	int myStack :: pop()
 	{
 		data.pop_back();
 	}
-	bool isEmpty()
+	bool myStack :: isEmpty()
 	{
 		return data.empty();
 	}
-	void print()
+	void myStack :: print()
 	{
 		cout << " Info from vector: ";
 		for (auto i = data.begin(); i != data.end(); i++)
@@ -42,4 +37,4 @@ public:
 			cout << *i<< " ";
 		}
 	}
-};
+
