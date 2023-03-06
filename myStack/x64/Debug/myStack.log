@@ -1,2 +1,6 @@
-﻿  myStack.cpp
-  myStack.vcxproj -> C:\Users\S02257117\source\repos\myStack\x64\Debug\myStack.exe
+﻿  testStack.cpp
+C:\Users\Nathan\source\repos\xdnathanm\CSC2034C-\myStack\testStack.cpp(19,30): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Nathan\source\repos\xdnathanm\CSC2034C-\myStack\testStack.cpp(37,19): warning C4305: 'initializing': truncation from 'int' to 'char'
+C:\Users\Nathan\source\repos\xdnathanm\CSC2034C-\myStack\testStack.cpp(37,13): warning C4309: 'initializing': truncation of constant value
+C:\Users\Nathan\source\repos\xdnathanm\CSC2034C-\myStack\testStack.cpp(57): warning C4172: returning address of local variable or temporary: null
+  myStack.vcxproj -> C:\Users\Nathan\source\repos\xdnathanm\CSC2034C-\myStack\x64\Debug\myStack.exe

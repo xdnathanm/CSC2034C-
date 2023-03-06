@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Downloads\myStack.h">
+    <ClInclude Include="myStack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -23,10 +23,11 @@
     <ClCompile Include="myStack.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="testStack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\..\..\Downloads\rpnArithmetic.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
+    <Text Include="rpnArithmetic.txt" />
   </ItemGroup>
 </Project>
