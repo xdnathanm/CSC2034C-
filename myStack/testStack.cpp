@@ -14,31 +14,61 @@ void parse(char*);
 int main()
 {
 	string fString;
-	myStack newStack;
+	string* pString;
+	
+	size_t size {};
+	int stringS = 0;
 	char* pLine;
-	char hold;
+	char hold [] = " ";
 	
 	fString = readFile();
-	string& arithmatic = fString;
 	
-	int size = arithmatic.size();
+	string& arithmatic = fString;
+	//pString = fString;
+	//newStack.push(stoi(arithmatic, &size));
+	stringS = fString.capacity();
+	
 	cout << arithmatic;
-//	char* cArray = getValue;
-	//strcpy(cArray, arithmatic.c_str());
-	//..parse(cArray );
+	char cArray[157];
+	strcpy(cArray, arithmatic.c_str());
+	parse(cArray);
+
+
+	cout << endl;
 	return 0;
 }
-void parse(char* getValues )
+void parse(char* cArray)
 {
-	string hold = strtok(getValues, " ");
+	myStack nStack;
+	string getValues = cArray;
+	char* pLine  [158] {};
+	char* hold;
+	const char* delim = " ";
+	hold = strtok(cArray, delim);
+	int i=0;
+	int number;
+	while (hold)
+	{
+		pLine[i] = hold;
+		
+		if (hold != "+" /* && hold != "-" && hold != "*" && hold != "/"*/)
+		{
+			nStack.push(stoi(hold));
+		}
+		hold = strtok(nullptr, delim);
+		i++;
+	}
+
+	i = 0;
 	
+	//number = stoi(pLine[i]);
+	//nStack.push(stoi(pLine[i]));
 	
-	myStack newstack;
 	
 }
 string readFile()
 {
-	string fString = "/0 "; // file string
+	string fString; // file string
 	string fTotal = fString;// file total
 	ifstream inFile;
 	
