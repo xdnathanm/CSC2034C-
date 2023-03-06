@@ -1,6 +1,6 @@
 ﻿  testStack.cpp
-C:\Users\Nathan\source\repos\xdnathanm\CSC2034C-\myStack\testStack.cpp(19,30): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Nathan\source\repos\xdnathanm\CSC2034C-\myStack\testStack.cpp(37,19): warning C4305: 'initializing': truncation from 'int' to 'char'
-C:\Users\Nathan\source\repos\xdnathanm\CSC2034C-\myStack\testStack.cpp(37,13): warning C4309: 'initializing': truncation of constant value
-C:\Users\Nathan\source\repos\xdnathanm\CSC2034C-\myStack\testStack.cpp(57): warning C4172: returning address of local variable or temporary: null
-  myStack.vcxproj -> C:\Users\Nathan\source\repos\xdnathanm\CSC2034C-\myStack\x64\Debug\myStack.exe
+C:\Users\S02257117\Source\Repos\CSC2034C-\myStack\testStack.cpp(24,30): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\S02257117\Source\Repos\CSC2034C-\myStack\testStack.cpp(19,7): warning C4101: 'hold': unreferenced local variable
+C:\Users\S02257117\Source\Repos\CSC2034C-\myStack\testStack.cpp(18,8): warning C4101: 'pLine': unreferenced local variable
+C:\Users\S02257117\Source\Repos\CSC2034C-\myStack\testStack.cpp(72): warning C4172: returning address of local variable or temporary: fString
+  myStack.vcxproj -> C:\Users\S02257117\Source\Repos\CSC2034C-\myStack\x64\Debug\myStack.exe

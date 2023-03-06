@@ -1,29 +1,31 @@
 #include <fstream>
-#include<myStack.h>
+#include <myStack.h>
 #include <string.h>
-#include < stdio.h>
+#include <stdio.h>
+#include <string>
+#include <iostream>
 #define _CRT_SECURE_NO_DEPRECIATE
 
 
 // the function to read in the text file
-char& readFile();
+string readFile();
 void parse(char*);
 
 int main()
 {
-	string arithmatic = " ";
+	string fString;
 	myStack newStack;
 	char* pLine;
 	char hold;
-	char getValue[] = " ";
-	char& fileLine = readFile();
-	hold = fileLine;
+	
+	fString = readFile();
+	string& arithmatic = fString;
 	
 	int size = arithmatic.size();
 	cout << arithmatic;
-	char* cArray = getValue;
-	strcpy(cArray, arithmatic.c_str());
-	parse(cArray );
+//	char* cArray = getValue;
+	//strcpy(cArray, arithmatic.c_str());
+	//..parse(cArray );
 	return 0;
 }
 void parse(char* getValues )
@@ -34,39 +36,40 @@ void parse(char* getValues )
 	myStack newstack;
 	
 }
-char& readFile()
-
+string readFile()
 {
-	string getsize;
-	char null ='null';
-	char& line = null;
-	int count = 0;
-	char* pLine;
-	
-	//line = getValue;
+	string fString = "/0 "; // file string
+	string fTotal = fString;// file total
 	ifstream inFile;
+	
 	inFile.open("rpnArithmetic.txt");
 	while (inFile.good())
 	{
-		inFile >> getsize;
-	}
-	count = getsize.size();
-	char getValue[] = " ";
-	while (inFile.good())
-	{
-		if (inFile.is_open())
+		while (!inFile.eof())
 		{
-			inFile.get(line);
-			cout << line;
-		}
-		else
-		{
-			cout << "Error: file is not open";
+			if (inFile.is_open())
+			{
+				// getline is passed the file and a string coppies the line in the textfile to the string until a "\n" is found then returns, the string is then added to 
+				// fTotal to store the string since it will be over written as the loop continues.
+				getline(inFile, fString);
+				fTotal += fString + "\n";
+
+			}
+			else
+			{
+				cout << "Error: file is not open";
+			}
 		}
 	}
-	//std:: getline(inFile, arithmatic," ");
+	/*cout << endl;
+	cout << "******************************************************";
+	cout << "\n";
+	cout << fString;
+	cout << " \n" << " * ********************" << "\n";
+	cout << fTotal; */
+	
 	inFile.close();
-	return line;
+	return fTotal;
 
 
 }
