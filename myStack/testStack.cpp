@@ -50,7 +50,7 @@ void parse(char* cArray)
 	while (hold)
 	{
 		pLine[i] = hold;
-		
+		// try using pLine insted of hold in the if statment
 		if (hold != "+" /* && hold != "-" && hold != "*" && hold != "/"*/)
 		{
 			nStack.push(stoi(hold));
