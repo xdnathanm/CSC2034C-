@@ -33,9 +33,16 @@ int main()
 	
 	cout << arithmatic;
 	char cArray[157];
-	strcpy(cArray, arithmatic.c_str());
-	parse(cArray);
+	while (!arithmatic.empty()) 
+	{
+		strcpy(cArray, arithmatic.c_str());
 
+		strtok(cArray, "\n");
+		size = arithmatic.find_first_of("\n");
+		arithmatic.erase(0, size + 1);
+		// cout << "\n" << arithmatic;
+		parse(cArray);
+	}
 
 	cout << endl;
 	return 0;
@@ -44,6 +51,7 @@ void parse(char* cArray)
 {
 	myStack nStack;
 	string getValues = cArray;
+	string parse = cArray;
 	char* pLine  [158] {};
 	char* hold;
 	const char* delim = " ";
@@ -52,7 +60,7 @@ void parse(char* cArray)
 	int i=0;
 	int num1 = 0, num2 = 0;
 	
-	while (hold)
+	while (parse != "\n")
 	{
 		getValues = hold;
 		pLine[i] = hold;
@@ -69,11 +77,14 @@ void parse(char* cArray)
 				num1 = nStack.pop();
 				num2 = nStack.pop();
 				num1 += num2;
+
 			}
 			else
 			{
 				num2 = nStack.pop();
 				num1 += num2;
+				
+
 			}
 		}
 		else if(getValues == "-")
@@ -88,6 +99,7 @@ void parse(char* cArray)
 			{
 				num2 = nStack.pop();
 				num1 -= num2;
+				
 			}
 		}
 		else if (getValues == "/")
@@ -102,6 +114,7 @@ void parse(char* cArray)
 			{
 				num2 = nStack.pop();
 				num1 /= num2;
+				
 			}
 		}
 		else if (getValues == "*")
@@ -116,13 +129,21 @@ void parse(char* cArray)
 			{
 				num2 = nStack.pop();
 				num1 *= num2;
+				
 			}
 		}
 		hold = strtok(nullptr, delim);
 		i++;
-		
-		
+		if (hold == NULL)
+		{
+			parse = "\n";
 			cout << num1 << " ";
+		}
+		else
+		{
+			parse = hold;
+		}
+			
 		
 	}
 
