@@ -106,8 +106,8 @@ void parse(char* cArray)
 		{
 			if (nStack.getSize() == 2)
 			{
-				num1 = nStack.pop();
 				num2 = nStack.pop();
+				num1 = nStack.pop();
 				num1 /= num2;
 			}
 			else
