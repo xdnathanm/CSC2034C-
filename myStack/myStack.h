@@ -14,6 +14,7 @@ public:
 	~myStack();
 	void push(int);
 	int pop();
+	int getSize();
 	bool isEmpty();
 	void print();
 	friend std::ostream& operator << (std::ostream&, myStack&);
