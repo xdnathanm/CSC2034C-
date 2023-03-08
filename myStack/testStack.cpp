@@ -72,7 +72,7 @@ void parse(char* cArray)
 			nStack.push(stoi(pLine[i]));  // if it is a digit converts it using StoI and pushes it to the myStack vector
 		}
 		else {
-			if (getValues == "+")            // the big if statement that is used to evaluate the expressions starting with +
+			if (getValues == "+")            // the big if statement that is used to evaluate the expressions starting with the '+' opperator
 			{
 				if (nStack.getSize() == 2)   // checks if there are 2 numbers pushed to the stack so that it knows how many numbers to pop
 				{
