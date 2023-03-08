@@ -14,7 +14,7 @@ public:
 	~myStack();
 	void push(int);
 	int pop();
-	int getSize();
+	int getSize(); // added function to get the size of the vector.
 	bool isEmpty();
 	void print();
 	friend std::ostream& operator << (std::ostream&, myStack&);
