@@ -4,6 +4,9 @@
 #include <stdio.h>
 #include <string>
 #include <iostream>
+
+#include <stdlib.h>
+#include <ctype.h>
 #define _CRT_SECURE_NO_DEPRECIATE
 
 
@@ -44,19 +47,83 @@ void parse(char* cArray)
 	char* pLine  [158] {};
 	char* hold;
 	const char* delim = " ";
+	char iHold;
 	hold = strtok(cArray, delim);
 	int i=0;
-	int number;
+	int num1 = 0, num2 = 0;
+	
 	while (hold)
 	{
+		getValues = hold;
 		pLine[i] = hold;
-		// try using pLine insted of hold in the if statment
-		if (hold != "+" /* && hold != "-" && hold != "*" && hold != "/"*/)
+		iHold = getValues[0];
+		getValues = iHold;
+		if (isdigit(iHold))///* && hold != "-" && hold != "*" && hold != "/"*/)
 		{
-			nStack.push(stoi(hold));
+			nStack.push(stoi(pLine[i]));
+		}
+		if (getValues == "+")
+		{
+			if (nStack.getSize() == 2)
+			{
+				num1 = nStack.pop();
+				num2 = nStack.pop();
+				num1 += num2;
+			}
+			else
+			{
+				num2 = nStack.pop();
+				num1 += num2;
+			}
+		}
+		else if(getValues == "-")
+		{
+			if (nStack.getSize() == 2)
+			{
+				num1 = nStack.pop();
+				num2 = nStack.pop();
+				num1 -= num2;
+			}
+			else
+			{
+				num2 = nStack.pop();
+				num1 -= num2;
+			}
+		}
+		else if (getValues == "/")
+		{
+			if (nStack.getSize() == 2)
+			{
+				num1 = nStack.pop();
+				num2 = nStack.pop();
+				num1 /= num2;
+			}
+			else
+			{
+				num2 = nStack.pop();
+				num1 /= num2;
+			}
+		}
+		else if (getValues == "*")
+		{
+			if (nStack.getSize() == 2)
+			{
+				num1 = nStack.pop();
+				num2 = nStack.pop();
+				num1 *= num2;
+			}
+			else
+			{
+				num2 = nStack.pop();
+				num1 *= num2;
+			}
 		}
 		hold = strtok(nullptr, delim);
 		i++;
+		
+		
+			cout << num1 << " ";
+		
 	}
 
 	i = 0;
