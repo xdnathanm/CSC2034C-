@@ -38,6 +38,7 @@ int main()
 		strcpy(cArray, arithmatic.c_str());
 
 		strtok(cArray, "\n");
+		cout << "Expression " << cArray << " evaluates to: ";
 		size = arithmatic.find_first_of("\n");
 		arithmatic.erase(0, size + 1);
 		// cout << "\n" << arithmatic;
@@ -65,7 +66,7 @@ void parse(char* cArray)
 		getValues = hold;
 		pLine[i] = hold;
 		iHold = getValues[0];
-		getValues = iHold;
+		//getValues = iHold;
 		if (isdigit(iHold))///* && hold != "-" && hold != "*" && hold != "/"*/)
 		{
 			nStack.push(stoi(pLine[i]));
@@ -74,8 +75,8 @@ void parse(char* cArray)
 		{
 			if (nStack.getSize() == 2)
 			{
-				num1 = nStack.pop();
 				num2 = nStack.pop();
+				num1 = nStack.pop();
 				num1 += num2;
 
 			}
@@ -91,8 +92,8 @@ void parse(char* cArray)
 		{
 			if (nStack.getSize() == 2)
 			{
-				num1 = nStack.pop();
 				num2 = nStack.pop();
+				num1 = nStack.pop();
 				num1 -= num2;
 			}
 			else
@@ -137,7 +138,7 @@ void parse(char* cArray)
 		if (hold == NULL)
 		{
 			parse = "\n";
-			cout << num1 << " ";
+			cout << num1 << " \n" ;
 		}
 		else
 		{
@@ -179,12 +180,7 @@ string readFile()
 			}
 		}
 	}
-	/*cout << endl;
-	cout << "******************************************************";
-	cout << "\n";
-	cout << fString;
-	cout << " \n" << " * ********************" << "\n";
-	cout << fTotal; */
+	
 	
 	inFile.close();
 	return fTotal;
