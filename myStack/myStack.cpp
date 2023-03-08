@@ -28,8 +28,10 @@ using namespace std;
 	}
 	int myStack:: pop()
 	{
-		 data.pop_back();
-		 return 1;
+		int rValue = data.back();
+		data.pop_back();
+		return  rValue;
+		
 	}
 	bool myStack :: isEmpty()
 	{
@@ -42,5 +44,9 @@ using namespace std;
 		{
 			cout << *i<< " ";
 		}
+	}
+	int myStack::getSize()
+	{
+		return data.size();
 	}
 
