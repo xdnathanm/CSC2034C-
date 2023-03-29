@@ -1,1 +1,3 @@
-﻿
+﻿  sets.cpp
+C:\Users\Nathan\source\repos\CSC2034C-\Sets\sets.cpp(20): error C4716: 'set::operator+=': must return a value
+C:\Users\Nathan\source\repos\CSC2034C-\Sets\sets.cpp(26): error C4716: 'set::operator-=': must return a value

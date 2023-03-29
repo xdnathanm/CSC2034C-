@@ -1,3 +1,4 @@
 C:\Users\S02257117\source\repos\myStack\x64\Debug\myStack.exe
 C:\Users\Nathan\source\repos\xdnathanm\CSC2034C-\myStack\x64\Debug\myStack.exe
 C:\Users\S02257117\Source\Repos\CSC2034C-\myStack\x64\Debug\myStack.exe
+C:\Users\Nathan\source\repos\CSC2034C-\myStack\x64\Debug\myStack.exe

@@ -1,22 +1,29 @@
 #ifndef SETS_H
 #define SETS_H
+#include <iostream>
 #include <vector>
+using namespace std;
 
-
-class Set
+class set
 {
 
 	private:
-		int size;
-		std::vector<int> set;
+		
+		std:: vector<int> setList;
 public:
-	Set();
-	~Set();
-	Set& operator +=(Set nSet);		 // the += overload operator
-	Set& operator -=(Set nSet);		 // the -= overload operator
-	friend Set operator*(Set nSet);	 // the * overload operator
-	friend Set operator +(Set nSet); // the + overload operator
-	friend Set operator -(Set nSet); // the - overload operator
-	void print(Set nSet);
+	//constructors/destriuctors
+	set();
+	~set();
+	
+	//member functions
+	set& operator +=(int element);		 // the += overload operator
+	set& operator -=( set& nSet);		 // the -= overload operator
+	void print(set nSet);
+	
+	//friend functions
+	friend set operator*(const set& nSet, const set& nSet2);	 // the * overload operator
+	friend set operator +(set& nSet, const set& nSet2); // the + overload operator
+	friend set operator -(const set& nSet); // the - overload operator
+	
 };
 #endif
