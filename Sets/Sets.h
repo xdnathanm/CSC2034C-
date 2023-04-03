@@ -16,14 +16,14 @@ public:
 	~set();
 	
 	//member functions
-	set& operator +=(int element);		 // the += overload operator
-	set& operator -=( set& nSet);		 // the -= overload operator
-	void print(set nSet);
+	void operator +=(int element);		 // the += overload operator void?
+	void operator -=( set& nSet);		 // the -= overload operator
+	void print();
 	
 	//friend functions
-	friend set operator*(const set& nSet, const set& nSet2);	 // the * overload operator
-	friend set operator +(set& nSet, const set& nSet2); // the + overload operator
-	friend set operator -(const set& nSet); // the - overload operator
+	friend set operator*(const set& nSet, const set& nSet2);	 // the * overload operator ( intersection between 2 sets)
+	friend set operator +(const set& nSet, const set& nSet2); // the + overload operator ( union between 2 sets)
+	friend set operator -(const set& nSet, const set& nSet2); // the - overload operator ( differance between 2 sets)
 	
 };
 #endif
