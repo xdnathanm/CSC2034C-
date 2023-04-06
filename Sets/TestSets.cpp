@@ -23,11 +23,11 @@ int main()
 	set1.print();
 	set2.print();
 
-	std:: cout << endl << "would you like to run a set Command? (y/n)" << endl;
+	std:: cout << std ::endl << "would you like to run a set Command? (y/n)" << std ::endl;
 	std::cin >> input; 
 	while (input != 'n')
 	{
-		std:: cout << endl << endl << " 1) intersection, 2) union, 3) difference " << endl;
+		std:: cout << std ::endl << std :: endl << " 1) intersection, 2) union, 3) difference " << std ::endl;
 
 		std ::cin >> choice;
 		switch (choice)
@@ -53,5 +53,8 @@ int main()
 		std ::cin >> input;
 		input = tolower(input);
 	}
+	set1.~set();
+	set2.~set();
+	set3.~set();
 	return 0;
 }
