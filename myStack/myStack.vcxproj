@@ -78,7 +78,11 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+<<<<<<< HEAD
     <ExecutablePath>C:\Users\S02257117\Source\Repos\xdnathanm\CSC2034C-;C:\Users\S02257117\Source\Repos\xdnathanm\CSC2034C-\myStack;$(ExecutablePath)</ExecutablePath>
+=======
+    <IncludePath>C:\Users\Nathan\source\repos\CSC2034C-\myStack;$(IncludePath)</IncludePath>
+>>>>>>> 52990af7f3589bc5373b5eb9f41890f0e85c77bc
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
