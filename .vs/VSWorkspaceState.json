@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\myStack"
+    "\\myStack",
+    "\\myStacksTemplet"
   ],
-  "SelectedNode": "\\myStack\\myStack.cpp",
+  "SelectedNode": "\\myStacksTemplet",
   "PreviewInSolutionExplorer": false
 }
