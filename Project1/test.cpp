@@ -1,3 +1,4 @@
+#pragma warning (disable :C4996)
 #include <fstream>
 #include <myStack.h>
 #include <string.h>
@@ -7,7 +8,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #define _CRT_SECURE_NO_DEPRECIATE
-
+#define _CRT_SECURE_NO_WARNINGS
 
 // the function to read in the text file
 //	returns a string copy of the text file. 

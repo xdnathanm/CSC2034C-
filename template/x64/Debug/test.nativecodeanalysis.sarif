@@ -1,0 +1,51 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.35.32217.1",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/users/xdnat/source/repos/csc2034c-/template/test.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "9c084d4b249b89763dac72eb7dbda87d28f05e5bf2d5c50731efe29a9b37fadb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/xdnat/source/repos/csc2034c-/template/mystack.cpp"
+          },
+          "hashes": {
+            "sha-256": "cbaa9421075c6fd03ff3a9ddfb357546b9f95492a0ec02462d90da98134a8d64"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/xdnat/source/repos/csc2034c-/template/mystack.h"
+          },
+          "hashes": {
+            "sha-256": "ae2be0a5bee70fbf68dcf2abfb47e905429f217b644fcc7b1d74d0be609be04a"
+          }
+        }
+      ]
+    }
+  ]
+}
