@@ -23,18 +23,18 @@ int main()
 
 	size_t size{};					// used to find the length of the line to be parsed
 	string fString = readFile();	// File string that holds the string obtained from the txt file.
-	string& arithmatic = fString;	// stores the string into a refferance so that it can be manupulated seperataly but not lost
+	string& arithmatic = fString;	// stores the string into a reference so that it can be manipulated separately but not lost
 
 	char cArray[157];				// creates a character array to store the file string on so that it can be parsed.
 	// loops while the string is not empty
 	while (!arithmatic.empty())
 	{
-		strcpy(cArray, arithmatic.c_str());   // coppies the string to the char array so strtok can be used.
+		strcpy(cArray, arithmatic.c_str());   // copies the string to the char array so strtok can be used.
 
 		strtok(cArray, "\n");					// tokenizes the char array so that it can become the first line of the string. Although the command has a return value it is not needed here.
 		cout << "Expression " << cArray << " evaluates to: ";   // prints the desired format.
 		size = arithmatic.find_first_of("\n");					// gets the size of the line so it can be erased from the string.
-		arithmatic.erase(0, size + 1);							// erases the line ( the size + 1 is so the \n character is erased aswell.
+		arithmatic.erase(0, size + 1);							// erases the line ( the size + 1 is so the \n character is erased as well.
 
 		parse(cArray);											// calls the parse function, the char array is passed in. 
 	}
@@ -55,7 +55,7 @@ void parse(char* cArray)
 	const char* delim = " ";
 	char iHold;
 	hold = strtok(cArray, delim);
-	int i = 0; // itirator
+	int i = 0; // iterator
 	int num1 = 0, num2 = 0; // values for the evaluation of the RPN
 
 	while (parse != "\n")

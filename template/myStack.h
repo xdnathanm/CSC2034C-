@@ -15,7 +15,7 @@ class myStack
 {
 
 private:
-	vector<T> data; // vector used to dynamicaly store and remove the data
+	vector<T> data; // vector used to dynamically store and remove the data
 
 public:
 	myStack(); // constructor

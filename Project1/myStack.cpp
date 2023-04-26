@@ -5,7 +5,7 @@ using namespace std;
 
 
 // the constructor
-// create an instence of myStack
+// create an instance of myStack
 
 
 
