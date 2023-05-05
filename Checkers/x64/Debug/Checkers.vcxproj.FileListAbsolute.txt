@@ -1,1 +1,2 @@
 C:\Users\xdnat\source\repos\Checkers\x64\Debug\Checkers.exe
+C:\Users\xdnat\source\repos\CSC2034C-\Checkers\x64\Debug\Checkers.exe

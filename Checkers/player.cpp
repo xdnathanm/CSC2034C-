@@ -32,7 +32,7 @@ void player::setPNumber(int pNumber)
 }
 void player::setPScore(int pScore)
 {
-	this->pScore = pScore;
+	this->pScore += pScore;
 }
 void player::setWin(bool winner)
 {
